@@ -69,18 +69,19 @@ Returns current position data including amount, unlock timestamp, and release st
 
 ## Architecture
 
+```text
 User
-↓
+  ↓
 Deposit Liquidity
-↓
+  ↓
 Create Lock Position
-↓
+  ↓
 Store Unlock Conditions
-↓
+  ↓
 Wait Until Expiration
-↓
+  ↓
 Release Locked Funds
-
+```
 ---
 
 ## Security Considerations
