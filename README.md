@@ -15,8 +15,6 @@ Secure on-chain liquidity locking with transparent release conditions.
 
 A lightweight liquidity locking protocol built on OPN Chain for Builders Season 1.
 
-A lightweight liquidity locking protocol built on OPN Chain for Builders Season 1.
-
 ---
 
 ## Overview
