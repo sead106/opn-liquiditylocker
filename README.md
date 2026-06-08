@@ -39,32 +39,27 @@ The protocol focuses on transparency, simplicity, and verifiable lock conditions
 
 Contract:
 
-contracts/LiquidityLocker.sol
+`contracts/LiquidityLocker.sol`
 
-Core functions:
+### Core Functions
 
-* lock()
-* extendLock()
-* release()
-* getLock()
+- `lock(uint256 unlockTime)`  
+  Lock funds on-chain until a predefined unlock timestamp.
+
+- `extendLock(uint256 newUnlockTime)`  
+  Extend the lock duration without withdrawing funds.
+
+- `release()`  
+  Release locked funds after the unlock condition is met.
+
+- `getLock(address user)`  
+  Return current lock status, unlock time, amount, and release state.
 
 ---
 
 ## Architecture
 
-User
-
-↓
-
-Lock Funds
-
-↓
-
-Store Unlock Timestamp
-
-↓
-
-Release Funds
+User → Lock Funds → Store Position → Wait Unlock → Release Funds
 
 ---
 
