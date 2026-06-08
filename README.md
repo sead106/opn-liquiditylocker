@@ -41,25 +41,54 @@ Contract:
 
 `contracts/LiquidityLocker.sol`
 
+### Purpose
+
+LiquidityLocker enables users to securely lock native assets on-chain and release them only after predefined unlock conditions are met.
+
+The protocol is designed to demonstrate transparent capital locking and deterministic fund release.
+
 ### Core Functions
 
-- `lock(uint256 unlockTime)`  
-  Lock funds on-chain until a predefined unlock timestamp.
+#### `lock(uint256 unlockTime)`
 
-- `extendLock(uint256 newUnlockTime)`  
-  Extend the lock duration without withdrawing funds.
+Creates a new liquidity position by locking funds until a future timestamp.
 
-- `release()`  
-  Release locked funds after the unlock condition is met.
+#### `extendLock(uint256 newUnlockTime)`
 
-- `getLock(address user)`  
-  Return current lock status, unlock time, amount, and release state.
+Extends the active lock period without requiring users to withdraw and relock assets.
+
+#### `release()`
+
+Unlocks and transfers funds back to the position owner once the lock period expires.
+
+#### `getLock(address user)`
+
+Returns current position data including amount, unlock timestamp, and release status.
 
 ---
 
 ## Architecture
 
-User → Lock Funds → Store Position → Wait Unlock → Release Funds
+User
+↓
+Deposit Liquidity
+↓
+Create Lock Position
+↓
+Store Unlock Conditions
+↓
+Wait Until Expiration
+↓
+Release Locked Funds
+
+---
+
+## Security Considerations
+
+* Time-based release validation
+* User-owned withdrawal flow
+* Prevent early release attempts
+* Minimal state transitions
 
 ---
 
