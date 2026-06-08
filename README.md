@@ -9,9 +9,11 @@ Secure on-chain liquidity locking with transparent release conditions.
 ## Deployment
 
 - Network: IOPN Testnet
-- Contract Addresses: `0xd450F0Bf17696F54C3132D9333bE22895e07B564`
-- Explorer: [Add after verification](https://testnet.iopn.tech/address/0xd450F0Bf17696F54C3132D9333bE22895e07B564)
+- Contract Address: `0xd450F0Bf17696F54C3132D9333bE22895e07B564`
+- Explorer: https://testnet.iopn.tech/address/0xd450F0Bf17696F54C3132D9333bE22895e07B564
 - Live Demo: https://opn-liquiditylocker.vercel.app
+
+A lightweight liquidity locking protocol built on OPN Chain for Builders Season 1.
 
 A lightweight liquidity locking protocol built on OPN Chain for Builders Season 1.
 
